@@ -60,7 +60,9 @@ for val in range(1,6):
 				ws.cell(row = r, column = 1).value = para.text
 				# worksheet.write(row,col,date.text)
 				# worksheet.write(row,col+1,para.text)
-				r = r + 1
+			
+				r + = 1
+				print "post increment" + str(r)
 				wb.save('new.xlsx')
 
 			else:
