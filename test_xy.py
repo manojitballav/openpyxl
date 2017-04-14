@@ -47,14 +47,15 @@ for val in range(1,2):
 			pass
 		try:
 			if(len(date.text)>1):
-				with open('reveiw.txt','a') as file:
-					file.write(date.text)
+				with open('reveiw.txt','a') as file1:
+					file1.write(para.text+'\r\n')
+				with open('date.txt','a') as file2:
+					file2.write(date.text+'\r\n')
 			else:
 				print "Some problem here at row: " +str(row) + str(time.ctime())
 		except Exception:
 			pass
 	print "End of page: "+val
 driver.quit()
-workbook.close()
 print "Done" 
 print time.ctime()	
