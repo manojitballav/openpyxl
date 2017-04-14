@@ -18,7 +18,6 @@ ws = wb.create_sheet("Sheet1",0)
 wb.save("new.xlsx")
 
 r = 0
-c = 0
 
 for val in range(1,6):
 	val = str(val)
@@ -56,11 +55,12 @@ for val in range(1,6):
 			pass
 		try:
 			if(len(date.text)>1):
-				ws.cell(row = r, column = c, value = date.text)
-				ws.cell(row = r, column = c+1, value = para.text)
+				print r
+				ws.cell(row = r, column = 0).value = date.text
+				ws.cell(row = r, column = 1).value = para.text
 				# worksheet.write(row,col,date.text)
 				# worksheet.write(row,col+1,para.text)
-				r+=1
+				r = r + 1
 				wb.save('new.xlsx')
 
 			else:
